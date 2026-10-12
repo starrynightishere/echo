@@ -18,3 +18,16 @@ Python 3. No dependencies.
 ```sh
 python3 -m unittest
 ```
+
+Recover one layer's thickness from synthetic complex reflection measurements:
+
+```sh
+python3 recover.py
+```
+
+The example uses a 0.317 m layer, six frequencies from 200 to 1,300 Hz, and
+independent Gaussian noise with standard deviation 0.005 on each real and
+imaginary component (seed 7). Material properties stay fixed. It searches
+0.05–0.65 m in 1 mm steps and writes `observations.csv` and `thickness.csv`.
+The best grid point has the lowest mean squared complex residual; it need not
+be the only thickness consistent with the data.
