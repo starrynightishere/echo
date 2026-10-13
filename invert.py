@@ -8,6 +8,7 @@ def reflection_loss(z_left, z_layer, z_right, speed, thickness, frequencies, obs
 
 
 def stack_loss(z_left, stack, z_right, frequencies, observed):
+    stack = list(stack)
     if not frequencies or len(frequencies) != len(observed):
         raise ValueError("provide one reflection measurement per frequency")
     if any(not isfinite(r.real) or not isfinite(r.imag) for r in observed):

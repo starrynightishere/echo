@@ -7,3 +7,7 @@ __pycache__/
 /ambiguity_observations.csv
 /ambiguity.csv
 /candidates.csv
+/frequency_scores.csv
+/selection_trials.csv
+/selection_summary.csv
+/results/trials.csv
