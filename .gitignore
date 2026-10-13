@@ -2,12 +2,7 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
-/observations.csv
-/thickness.csv
-/ambiguity_observations.csv
-/ambiguity.csv
-/candidates.csv
-/frequency_scores.csv
-/selection_trials.csv
-/selection_summary.csv
-/results/trials.csv
+/results/recover/
+/results/ambiguity/
+/results/select_frequency/
+/results/benchmark/trials.csv

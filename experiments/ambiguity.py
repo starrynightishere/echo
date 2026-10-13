@@ -2,8 +2,8 @@ import csv
 from pathlib import Path
 from random import Random
 
-from invert import scan_pairs
-from layers import pressure_coefficients
+from echo.invert import scan_pairs
+from echo.layers import pressure_coefficients
 
 
 Z_LEFT, Z_RIGHT = 1.5e6, 1.0e6
@@ -16,7 +16,7 @@ FIRST = [0.05 + 0.01 * i for i in range(121)]
 SECOND = [0.05 + 0.01 * i for i in range(161)]
 
 
-def main(output="."):
+def main(output=Path(__file__).resolve().parents[1] / "results" / "ambiguity"):
     rng = Random(7)
     observed = []
     for frequency in FREQUENCIES:

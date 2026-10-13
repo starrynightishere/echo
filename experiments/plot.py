@@ -7,7 +7,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 
-def main(directory="results"):
+def main(directory=Path(__file__).resolve().parents[1] / "results" / "benchmark"):
     directory = Path(directory)
     example = json.loads((directory / "example.json").read_text())
     setup = json.loads((directory / "setup.json").read_text())

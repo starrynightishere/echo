@@ -1,10 +1,10 @@
 from random import Random
 import unittest
 
-from benchmark import paired_counts
-from invert import stack_loss
-from select_frequency import contains_target, run_trials, summarize
-from test_layers import transfer_coefficients
+from experiments.benchmark import paired_counts
+from echo.invert import stack_loss
+from experiments.select_frequency import contains_target, run_trials, summarize
+from tests.test_layers import transfer_coefficients
 
 
 class BenchmarkTests(unittest.TestCase):

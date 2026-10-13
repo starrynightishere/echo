@@ -1,8 +1,8 @@
 from random import Random
 import unittest
 
-from invert import reflection_loss, scan_thickness
-from test_layers import transfer_coefficients
+from echo.invert import reflection_loss, scan_thickness
+from tests.test_layers import transfer_coefficients
 
 
 class InversionTests(unittest.TestCase):

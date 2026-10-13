@@ -2,8 +2,8 @@ from cmath import exp
 from math import pi, sqrt
 import unittest
 
-from interface import pressure_coefficients as interface_coefficients
-from layer import energy_coefficients, pressure_coefficients
+from echo.interface import pressure_coefficients as interface_coefficients
+from echo.layer import energy_coefficients, pressure_coefficients
 
 
 class LayerTests(unittest.TestCase):

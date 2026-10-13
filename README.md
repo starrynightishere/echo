@@ -3,32 +3,40 @@
 Small experiments with reflected acoustic waves: fit layer thicknesses, find
 ambiguous solutions, and choose another frequency to measure.
 
+```text
+echo/          acoustic solver and inversion
+experiments/   runnable experiments and plotting
+tests/         physics and recovery checks
+results/       outputs grouped by experiment
+```
+
 ## run
 
 Python 3. The solver and tests use only the standard library.
 
 ```sh
 python3 -m unittest
-python3 recover.py
-python3 ambiguity.py
-python3 select_frequency.py
-python3 benchmark.py
+python3 -m experiments.recover
+python3 -m experiments.ambiguity
+python3 -m experiments.select_frequency
+python3 -m experiments.benchmark
 ```
 
 The scripts cover one-layer recovery, two-layer ambiguity, frequency selection,
 and a benchmark of five configurations at three noise levels. The benchmark
 runs 200 paired noise trials per case and noise level. Both methods get the
-same initial measurements and extra noise sample.
+same initial measurements and extra noise sample. Each script writes to its
+folder under `results/`; the plot reads `results/benchmark/`.
 
-[Plot](results/selection.png) · [Summary](results/summary.csv) ·
-[Paired counts](results/paired.csv) · [Settings](results/setup.json)
+[Plot](results/benchmark/selection.png) · [Summary](results/benchmark/summary.csv) ·
+[Paired counts](results/benchmark/paired.csv) · [Settings](results/benchmark/setup.json)
 
 To regenerate the plot after the benchmark:
 
 ```sh
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-plot.txt
-.venv/bin/python plot.py
+.venv/bin/python -m experiments.plot
 ```
 
 Matplotlib is only needed for plotting.

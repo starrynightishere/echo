@@ -2,8 +2,8 @@ import csv
 import json
 from pathlib import Path
 
-import ambiguity
-from select_frequency import run_trials, summarize
+from experiments import ambiguity
+from experiments.select_frequency import run_trials, summarize
 
 
 CASES = [
@@ -34,7 +34,7 @@ def paired_counts(rows):
     }
 
 
-def main(output="results", trials=200):
+def main(output=Path(__file__).resolve().parents[1] / "results" / "benchmark", trials=200):
     all_rows, summary, paired = [], [], []
     example = None
     for case in CASES:

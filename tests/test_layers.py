@@ -2,9 +2,9 @@ from math import cos, pi, sin
 from random import Random
 import unittest
 
-from interface import pressure_coefficients as interface_coefficients
-from layer import pressure_coefficients as single_layer_coefficients
-from layers import energy_coefficients, pressure_coefficients
+from echo.interface import pressure_coefficients as interface_coefficients
+from echo.layer import pressure_coefficients as single_layer_coefficients
+from echo.layers import energy_coefficients, pressure_coefficients
 
 
 def transfer_coefficients(z_left, stack, z_right, frequency):

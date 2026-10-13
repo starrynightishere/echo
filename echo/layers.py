@@ -1,7 +1,7 @@
 from cmath import exp
 from math import isfinite, pi
 
-from interface import pressure_coefficients as interface_coefficients
+from echo.interface import pressure_coefficients as interface_coefficients
 
 
 def pressure_coefficients(z_left, stack, z_right, frequency):

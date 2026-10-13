@@ -1,7 +1,7 @@
 import unittest
 
-from select_frequency import score_frequencies, update_candidates
-from test_layers import transfer_coefficients
+from experiments.select_frequency import score_frequencies, update_candidates
+from tests.test_layers import transfer_coefficients
 
 
 class FrequencyTests(unittest.TestCase):

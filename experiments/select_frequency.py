@@ -4,8 +4,8 @@ from pathlib import Path
 from random import Random
 from statistics import mean
 
-import ambiguity
-from layers import pressure_coefficients
+from experiments import ambiguity
+from echo.layers import pressure_coefficients
 
 
 def predictions(z_left, materials, z_right, candidates, frequency):
@@ -141,7 +141,7 @@ def summarize(rows):
     return summary
 
 
-def main(output=".", trials=200):
+def main(output=Path(__file__).resolve().parents[1] / "results" / "select_frequency", trials=200):
     truth = [layer[2] for layer in ambiguity.TRUTH]
     rows, example = run_trials(ambiguity.Z_LEFT, ambiguity.MATERIALS, ambiguity.Z_RIGHT,
                                truth, ambiguity.FREQUENCIES, ambiguity.FIRST, ambiguity.SECOND,

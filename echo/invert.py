@@ -1,6 +1,6 @@
 from math import isfinite
 
-from layers import pressure_coefficients
+from echo.layers import pressure_coefficients
 
 
 def reflection_loss(z_left, z_layer, z_right, speed, thickness, frequencies, observed):

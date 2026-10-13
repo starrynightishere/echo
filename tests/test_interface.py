@@ -1,6 +1,6 @@
 import unittest
 
-from interface import energy_coefficients, pressure_coefficients
+from echo.interface import energy_coefficients, pressure_coefficients
 
 
 class InterfaceTests(unittest.TestCase):

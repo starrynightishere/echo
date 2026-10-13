@@ -2,11 +2,11 @@ import csv
 from pathlib import Path
 from random import Random
 
-from invert import scan_thickness
-from layer import pressure_coefficients
+from echo.invert import scan_thickness
+from echo.layer import pressure_coefficients
 
 
-def main(output="."):
+def main(output=Path(__file__).resolve().parents[1] / "results" / "recover"):
     z_left, z_layer, z_right = 1.5e6, 4.0e6, 2.5e6
     speed = 2000.0
     thickness = 0.317

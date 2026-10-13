@@ -1,7 +1,7 @@
 import unittest
 
-from invert import scan_pairs, stack_loss
-from test_layers import transfer_coefficients
+from echo.invert import scan_pairs, stack_loss
+from tests.test_layers import transfer_coefficients
 
 
 class AmbiguityTests(unittest.TestCase):
